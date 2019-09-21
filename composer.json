@@ -1,0 +1,29 @@
+{
+    "name": "jonathanwdl/wdlspecials",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "Jonathan Wedel",
+            "role": "Developer"
+        }
+    ],
+    "version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "JonathanWdl\\Wdlspecials\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JonathanWdl\\Wdlspecials\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "jonathanwdl/wdlspecials": "self.version",
+        "typo3-ter/wdlspecials": "self.version"
+    }
+}

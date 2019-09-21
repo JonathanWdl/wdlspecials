@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-21T20:58:57Z" product-name="wdlspecials">
+		<header/>
+		<body>
+			<trans-unit id="tx_wdlspecials_domain_model_wdlspecials">
+				<source>Wdl Specials</source>
+			</trans-unit>
+			<trans-unit id="tx_wdlspecials_domain_model_wdlspecials.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_wdlspecials_domain_model_wdlspecials.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_wdlspecials_domain_model_wdlspecials.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_wdlspecials_domain_model_wdlspecials.special_start">
+				<source>Special Start</source>
+			</trans-unit>
+			<trans-unit id="tx_wdlspecials_domain_model_wdlspecials.special_stop">
+				<source>Special Stop</source>
+			</trans-unit>
+			<trans-unit id="tx_wdlspecials_domain_model_wdlspecials.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_wdlspecials_domain_model_wdlspecials.intervals">
+				<source>Intervals</source>
+			</trans-unit>
+			<trans-unit id="tx_wdlspecials_domain_model_wdlcategories">
+				<source>Wdl Categories</source>
+			</trans-unit>
+			<trans-unit id="tx_wdlspecials_domain_model_wdlcategories.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_wdlspecials_domain_model_wdlintervals">
+				<source>Wdl Intervals</source>
+			</trans-unit>
+			<trans-unit id="tx_wdlspecials_domain_model_wdlintervals.intervals">
+				<source>Intervals</source>
+			</trans-unit>
+			<trans-unit id="tx_wdlspecials_wdlspecials.name">
+				<source>WdlSpecials</source>
+			</trans-unit>
+			<trans-unit id="tx_wdlspecials_wdlspecials.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

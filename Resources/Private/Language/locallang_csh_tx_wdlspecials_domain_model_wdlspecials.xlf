@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-21T20:58:57Z" product-name="wdlspecials">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="special_start.description">
+				<source>specialStart</source>
+			</trans-unit>
+			<trans-unit id="special_stop.description">
+				<source>specialStop</source>
+			</trans-unit>
+			<trans-unit id="category.description">
+				<source>category</source>
+			</trans-unit>
+			<trans-unit id="intervals.description">
+				<source>intervals</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
