@@ -1,0 +1,21 @@
+<!-- Special -->
+<div class="special">
+    <div class="special-header">
+        <div class="special-title">
+            <strong>{special.name}</strong>
+        </div>
+        <div class="special-time">
+            <f:if condition="{special.specialStart} == {special.specialStop}">
+                <f:then>
+                    <span>ab: {special.specialStart}</span>
+                </f:then>
+                <f:else>
+                    <span>{special.specialStart} - {special.specialStop}</span>
+                </f:else>
+            </f:if>
+        </div>
+    </div>
+    <div class="special-content">
+        <p>{special.description}</p>
+    </div>
+</div>
