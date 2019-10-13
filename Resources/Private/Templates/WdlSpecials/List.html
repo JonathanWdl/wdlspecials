@@ -15,7 +15,6 @@
 	<f:section name="content">
 			<f:for each="{wdlSpecials}" as="wdlSpecials">
 				<div class="special-wrapper">
-					<f:comment><f:render partial="Special" /></f:comment>
 					{f:render(partial: 'Special', arguments:{
 						special: wdlSpecials
 					})}
