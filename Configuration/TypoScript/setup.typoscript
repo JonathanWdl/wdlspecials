@@ -57,3 +57,18 @@ plugin.tx_wdlspecials._CSS_DEFAULT_STYLE (
         color:green;
     }
 )
+
+page {
+    includeCSS {
+        owl_carousel = EXT:wdlspecials/Resources/Public/OwlCarousel/owl.carousel.min.css
+        owl_carousel_theme = EXT:wdlspecials/Resources/Public/OwlCarousel/owl.theme.default.min.css
+    }
+
+    includeJSLibs {}
+
+    includeJSFooterlibs {}
+
+    includeJSFooter {
+        owl_carousel = EXT:wdlspecials/Resources/Public/OwlCarousel/owl.carousel.min.js
+    }
+}
