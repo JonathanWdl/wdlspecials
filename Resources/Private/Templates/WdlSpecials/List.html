@@ -14,7 +14,7 @@
 
 	<f:section name="content">
 			<f:for each="{wdlSpecials}" as="wdlSpecials">
-				<div class="special-wrapper">
+				<div class="special-wrapper owl-carousel">
 					{f:render(partial: 'Special', arguments:{
 						special: wdlSpecials
 					})}

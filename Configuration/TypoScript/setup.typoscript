@@ -70,5 +70,6 @@ page {
 
     includeJSFooter {
         owl_carousel = EXT:wdlspecials/Resources/Public/OwlCarousel/owl.carousel.min.js
+        wdlspecials = EXT:wdlspecials/Resources/Public/JavaScript/special.js
     }
 }
