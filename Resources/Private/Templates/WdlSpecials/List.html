@@ -13,34 +13,20 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-			<f:for each="{wdlSpecials}" as="wdlSpecials">
-				<div class="special-wrapper owl-carousel">
-					{f:render(partial: 'Special', arguments:{
-						special: wdlSpecials
-					})}
-					<div class="pagination-prev"></div>
-					<div class="pagination-next"></div>
+		<div class="owl-carousel owl-theme owl-loaded">
+			<div class="owl-stage-outer">
+				<div class="owl-stage">
+					<f:for each="{wdlSpecials}" as="wdlSpecials">
+							{f:render(partial: 'Special', arguments:{
+								special: wdlSpecials
+							})}
+					</f:for>
 				</div>
-
-				<!-- ############################################################################################### -->
-
-				<f:comment>
-				<tr>
-					<td><f:link.action action="show" arguments="{wdlSpecials : wdlSpecials}"> {wdlSpecials.name}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{wdlSpecials : wdlSpecials}"> {wdlSpecials.description}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{wdlSpecials : wdlSpecials}"> {wdlSpecials.image.originalResource.name}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{wdlSpecials : wdlSpecials}"> {wdlSpecials.specialStart}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{wdlSpecials : wdlSpecials}"> {wdlSpecials.specialStop}</f:link.action></td>
-
-					<td><f:link.action action="edit" arguments="{wdlSpecials : wdlSpecials}">Edit</f:link.action></td>
-					<td><f:link.action action="delete" arguments="{wdlSpecials : wdlSpecials}">Delete</f:link.action></td>
-				</tr>
-				{wdlSpecials.category.category}
-				{wdlSpecials.intervals.intervals}
-				</f:comment>
-
-				<!-- ############################################################################################### -->
-
-			</f:for>
+				<div class="owl-nav">
+					<div class="owl-prev">prev</div>
+					<div class="owl-next">next</div>
+				</div>
+			</div>
+		</div>
 	</f:section>
 </html>
