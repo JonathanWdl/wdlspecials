@@ -20,10 +20,10 @@ return [
         'iconfile' => 'EXT:wdlspecials/Resources/Public/Icons/tx_wdlspecials_domain_model_wdlspecials.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, image, special_start, special_stop, category, intervals',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, image, special_date, special_start, special_stop, category, intervals',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, image, special_start, special_stop, category, intervals, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, image, special_date, special_start, special_stop, category, intervals, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -180,6 +180,17 @@ return [
                 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
             ),
         ],
+        'special_date' => [
+            'exclude' => true,
+            'label' => 'Datum',
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'eval' => 'date',
+                'default' => time()
+
+            ]
+        ],
         'special_start' => [
             'exclude' => true,
             'label' => 'LLL:EXT:wdlspecials/Resources/Private/Language/locallang_db.xlf:tx_wdlspecials_domain_model_wdlspecials.special_start',
@@ -199,6 +210,9 @@ return [
                 'renderType' => 'inputDateTime',
                 'size' => 4,
                 'eval' => 'time',
+                'range' => [
+                    'upper' => mktime(1, 1, 0, 0, 0, 0)
+                ],
                 'default' => time()
             ]
         ],

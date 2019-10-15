@@ -2,20 +2,23 @@
 <div class="special">
     <div class="special-header">
         <div class="special-title">
-            <strong>{special.name}</strong>
+            <strong><f:format.date format="d.m.Y">{special.specialDate}</f:format.date></strong>
         </div>
         <div class="special-time">
             <f:if condition="{special.specialStart} == {special.specialStop}">
                 <f:then>
-                    <span>ab: {special.specialStart}</span>
+                    <span>ab: <f:format.date format="H:i">{special.specialStart}</f:format.date>Uhr</span>
                 </f:then>
                 <f:else>
-                    <span>{special.specialStart} - {special.specialStop}</span>
+                    <span><f:format.date format="H:i">{special.specialStart}</f:format.date> - <f:format.date format="H:i">{special.specialStop}</f:format.date></span>
                 </f:else>
             </f:if>
         </div>
     </div>
     <div class="special-content">
+        <f:if condition="{special.name}">
+            <h2>{special.name}</h2>
+        </f:if>
         <p>{special.description}</p>
     </div>
 </div>
