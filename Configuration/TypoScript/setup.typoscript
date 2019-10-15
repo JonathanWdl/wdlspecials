@@ -58,18 +58,14 @@ plugin.tx_wdlspecials._CSS_DEFAULT_STYLE (
     }
 )
 
-page {
-    includeCSS {
-        owl_carousel = EXT:wdlspecials/Resources/Public/OwlCarousel/owl.carousel.min.css
-        owl_carousel_theme = EXT:wdlspecials/Resources/Public/OwlCarousel/owl.theme.default.min.css
-    }
+#########
+## CSS
+#########
+page.includeCSS.owl_carousel = EXT:wdlspecials/Resources/Public/OwlCarousel/owl.carousel.min.css
+page.includeCSS.owl_carousel_theme = EXT:wdlspecials/Resources/Public/OwlCarousel/owl.theme.default.min.css
 
-    includeJSLibs {}
-
-    includeJSFooterlibs {}
-
-    includeJSFooter {
-        owl_carousel = EXT:wdlspecials/Resources/Public/OwlCarousel/owl.carousel.min.js
-        wdlspecials = EXT:wdlspecials/Resources/Public/JavaScript/special.js
-    }
-}
+#########
+## JS
+#########
+page.includeJSFooter.owl_carousel = EXT:wdlspecials/Resources/Public/OwlCarousel/owl.carousel.min.js
+page.includeJSFooter.wdlspecials = EXT:wdlspecials/Resources/Public/JavaScript/special.js
