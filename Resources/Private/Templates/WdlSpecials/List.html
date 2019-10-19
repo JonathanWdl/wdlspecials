@@ -13,15 +13,19 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-		<f:for each="{wdlSpecials}" as="wdlSpecials">
-			<f:if condition="{f:format.date(date: wdlSpecials.specialDate, format: 'd.m.Y')} == {f:format.date(date: active.now, format: 'd.m.Y')}">
-				<f:then>
-					<f:render partial="Active" arguments="{special: wdlSpecial, active: active}"/>
-				</f:then>
-				<f:else>
-					<f:render partial="Special" arguments="{special: wdlSpecial}" />
-				</f:else>
-			</f:if>
-		</f:for>
+		<div class="special-wrapper">
+			<div class="current-special">
+				<f:for each="{activeSpecials}" as="activeSpecial" >
+					<f:render partial="Active" arguments="{activeSpecial: activeSpecial}" />
+				</f:for>
+			</div>
+			<div class="upcoming-specials">
+				<ul>
+					<f:for each="{notActiveSpecials}" as="notActiveSpecial">
+						<li><f:render partial="Special" arguments="{notActiveSpecial: notActiveSpecial}" /></li>
+					</f:for>
+				</ul>
+			</div>
+		</div>
 	</f:section>
 </html>

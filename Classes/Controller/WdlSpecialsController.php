@@ -34,21 +34,22 @@ class WdlSpecialsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
     public function listAction()
     {
         $wdlSpecials = $this->wdlSpecialsRepository->findAll();
-        $this->view->assign('wdlSpecials', $wdlSpecials);
+        // Arrays to store specials in
+        $activeSpecials = array();
+        $notActiveSpecials = array();
 
-        $active = array(
-            'now' => date( 'd.m.Y', strtotime('now')),
-            'class' => 'special-active'
-        );
-        $this->view->assign('active', $active);
-    }
-
-    public function however() {
-        $specialDate = $this->wdlSpecialsRepository->findByIdentifier('specialDate');
-        $passedDate = date( 'd.m.Y', $specialDate );
-        $now = date( 'd.m.Y', strtotime('now'));
-        if ( $now == $passedDate ) {
-            $this->view->assign( '' );
+        // Check if specials are today or not
+        foreach ($wdlSpecials as $key => $special) {
+            $specialDate = date('d.m.Y', $special->getSpecialDate());
+            $currentDate = date('d.m.Y');
+            if ( $specialDate == $currentDate) {
+                $activeSpecials[$key] = $special;
+            } else {
+                $notActiveSpecials[$key] = $special;
+            }
         }
+        // Assign all specials to view
+        $this->view->assign( 'activeSpecials', $activeSpecials );
+        $this->view->assign( 'notActiveSpecials', $notActiveSpecials);
     }
 }

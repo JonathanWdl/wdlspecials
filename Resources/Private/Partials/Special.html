@@ -1,27 +1,27 @@
-<!-- Special -->
-<f:comment>
-    <div class="special">
-    <div class="special-header">
-        <div class="special-title">
-            <strong><f:format.date format="d.m.Y">{special.specialDate}</f:format.date></strong>
-        </div>
-        <div class="special-time">
-            <f:if condition="{special.specialStart} == {special.specialStop}">
-                <f:then>
-                    <span>ab: <f:format.date format="H:i">{special.specialStart}</f:format.date>Uhr</span>
-                </f:then>
-                <f:else>
-                    <span><f:format.date format="H:i">{special.specialStart}</f:format.date> - <f:format.date format="H:i">{special.specialStop}</f:format.date></span>
-                </f:else>
-            </f:if>
-        </div>
-    </div>
-    <div class="special-content">
-        <f:if condition="{special.name}">
-            <h2>{special.name}</h2>
-        </f:if>
-        <p>{special.description}</p>
-    </div>
-</div></f:comment>
+<!-- PARTIAL NOT ACTIVE SPECIAL -->
 
-NOT ACTIVE
+<div class="special-time">
+    <div class="special-date">
+        <f:format.date format="j.">{notActiveSpecial.specialDate}</f:format.date>
+        <span><f:format.date format="F">{notActiveSpecial.specialDate}</f:format.date></span>
+    </div>
+    <div class="special-day">
+        <f:format.date format="l">{notActiveSpecial.specialDate}</f:format.date>
+    </div>
+</div>
+<div class="special-name">
+    <span><f:format.raw>{notActiveSpecial.name}</f:format.raw></span>
+    <span>
+        <f:if condition="{notActiveSpecial.specialStart} == {notActiveSpecial.specialStop}">
+            <f:then>
+                ab: <f:format.date format="H:i">{notActiveSpecial.specialStart}</f:format.date> Uhr
+            </f:then>
+            <f:else>
+                <f:format.date format="H:i">{notActiveSpecial.specialStart}</f:format.date> - <f:format.date format="H:i">{notActiveSpecial.specialStop}</f:format.date> Uhr
+            </f:else>
+        </f:if>
+    </span>
+</div>
+<div class="special-description">
+    <f:format.html>{notActiveSpecial.description}</f:format.html>
+</div>
