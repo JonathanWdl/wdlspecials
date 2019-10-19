@@ -35,5 +35,20 @@ class WdlSpecialsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
     {
         $wdlSpecials = $this->wdlSpecialsRepository->findAll();
         $this->view->assign('wdlSpecials', $wdlSpecials);
+
+        $active = array(
+            'now' => date( 'd.m.Y', strtotime('now')),
+            'class' => 'special-active'
+        );
+        $this->view->assign('active', $active);
+    }
+
+    public function however() {
+        $specialDate = $this->wdlSpecialsRepository->findByIdentifier('specialDate');
+        $passedDate = date( 'd.m.Y', $specialDate );
+        $now = date( 'd.m.Y', strtotime('now'));
+        if ( $now == $passedDate ) {
+            $this->view->assign( '' );
+        }
     }
 }

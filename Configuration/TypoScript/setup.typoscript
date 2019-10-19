@@ -61,12 +61,9 @@ plugin.tx_wdlspecials._CSS_DEFAULT_STYLE (
 #########
 ## CSS
 #########
-page.includeCSS.owl_carousel = EXT:wdlspecials/Resources/Public/OwlCarousel/owl.carousel.min.css
-page.includeCSS.owl_carousel_theme = EXT:wdlspecials/Resources/Public/OwlCarousel/owl.theme.default.min.css
 page.includeCSS.style = EXT:wdlspecials/Resources/Public/Css/style.css
 
 #########
 ## JS
 #########
-page.includeJSFooter.owl_carousel = EXT:wdlspecials/Resources/Public/OwlCarousel/owl.carousel.min.js
 page.includeJSFooter.wdlspecials = EXT:wdlspecials/Resources/Public/JavaScript/special.js

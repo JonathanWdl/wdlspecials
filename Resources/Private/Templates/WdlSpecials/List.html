@@ -13,20 +13,15 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-		<div class="owl-carousel owl-theme owl-loaded">
-			<div class="owl-stage-outer">
-				<div class="owl-stage special-wrapper">
-					<f:for each="{wdlSpecials}" as="wdlSpecials">
-							{f:render(partial: 'Special', arguments:{
-								special: wdlSpecials
-							})}
-					</f:for>
-				</div>
-				<div class="owl-nav">
-					<div class="owl-prev">prev</div>
-					<div class="owl-next">next</div>
-				</div>
-			</div>
-		</div>
+		<f:for each="{wdlSpecials}" as="wdlSpecials">
+			<f:if condition="{f:format.date(date: wdlSpecials.specialDate, format: 'd.m.Y')} == {f:format.date(date: active.now, format: 'd.m.Y')}">
+				<f:then>
+					<f:render partial="Active" arguments="{special: wdlSpecial, active: active}"/>
+				</f:then>
+				<f:else>
+					<f:render partial="Special" arguments="{special: wdlSpecial}" />
+				</f:else>
+			</f:if>
+		</f:for>
 	</f:section>
 </html>
