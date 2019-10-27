@@ -2,25 +2,53 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  font-family: Poppins; }
+  font-family: Poppins;
+  width: 100%; }
+  .special-wrapper .current-special {
+    width: 30%; }
   .special-wrapper .upcoming-specials {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; }
-    .special-wrapper .upcoming-specials ul li {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      border-bottom: 1px #aaa solid;
-      padding: 20px; }
+    justify-content: space-between;
+    width: 60%; }
+    .special-wrapper .upcoming-specials ul {
+      padding: 0; }
+      .special-wrapper .upcoming-specials ul li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px #aaa solid;
+        padding: 20px;
+        position: relative; }
+        .special-wrapper .upcoming-specials ul li .special-time, .special-wrapper .upcoming-specials ul li .special-name, .special-wrapper .upcoming-specials ul li .special-description {
+          display: inline-block;
+          width: 30%; }
+        .special-wrapper .upcoming-specials ul li .special-name .special-flex-column {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%; }
+          .special-wrapper .upcoming-specials ul li .special-name .special-flex-column span {
+            line-height: 1rem; }
 
 .special-time .special-date {
   font-size: 32px;
   font-weight: 700; }
-  .special-time .special-date span {
-    font-size: 16px; }
-.special-time .special-day {
-  font-size: 32px;
+  .special-time .special-date p {
+    margin: 0;
+    position: relative;
+    display: flex;
+    line-height: 3rem;
+    align-items: flex-start; }
+    .special-time .special-date p span {
+      font-size: 16px;
+      line-height: 2.3rem; }
+
+.special-day {
+  font-size: 2vw;
   align-self: flex-start; }
+  .special-day p {
+    margin: 0;
+    line-height: 1rem; }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,13 +3,21 @@
   flex-direction: row;
   justify-content: space-around;
   font-family: Poppins;
+  width: 100%;
+
+  .current-special {
+    width: 30%;
+  }
+
 
   .upcoming-specials {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 60%;
 
     ul {
+      padding: 0;
 
       li {
         display: flex;
@@ -17,6 +25,24 @@
         justify-content: space-between;
         border-bottom: 1px #aaa solid;
         padding: 20px;
+        position: relative;
+
+
+        .special-time, .special-name, .special-description {
+          display: inline-block;
+          width: 30%;
+        }
+
+        .special-name .special-flex-column {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+
+          span {
+            line-height: 1rem;
+          }
+        }
       }
     }
   }
@@ -24,17 +50,33 @@
 
 .special-time {
 
+
   .special-date {
     font-size: 32px;
     font-weight: 700;
 
-    span {
-      font-size: 16px;
+
+    p {
+      margin: 0;
+      position: relative;
+      display: flex;
+      line-height: 3rem;
+      align-items: flex-start;
+
+      span {
+        font-size: 16px;
+        line-height: 2.3rem;
+      }
     }
+  }
   }
 
   .special-day {
-    font-size: 32px;
+    font-size: 2vw;
     align-self: flex-start;
+
+    p {
+      margin: 0;
+      line-height: 1rem;
+    }
   }
-}
