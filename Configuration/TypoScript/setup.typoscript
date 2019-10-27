@@ -62,6 +62,8 @@ plugin.tx_wdlspecials._CSS_DEFAULT_STYLE (
 ## CSS
 #########
 page.includeCSS.style = EXT:wdlspecials/Resources/Public/Css/style.css
+poppins = EXT:mash_sitepackage/Resources/Public/Fonts/poppins.css
+
 
 #########
 ## JS

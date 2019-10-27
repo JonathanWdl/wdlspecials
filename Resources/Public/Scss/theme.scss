@@ -1,0 +1,40 @@
+.special-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: Poppins;
+
+  .upcoming-specials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    ul {
+
+      li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px #aaa solid;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+.special-time {
+
+  .special-date {
+    font-size: 32px;
+    font-weight: 700;
+
+    span {
+      font-size: 16px;
+    }
+  }
+
+  .special-day {
+    font-size: 32px;
+    align-self: flex-start;
+  }
+}

@@ -2,3 +2,6 @@
 .Build
 composer.lock
 .idea
+
+Resources/Public/.sass-cache/
+Resources/Public/Css/style.css.map
