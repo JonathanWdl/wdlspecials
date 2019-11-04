@@ -1,11 +1,23 @@
+body {
+  font-family: Poppins; }
+
+.frame-container {
+  padding-top: 100px; }
+
 .special-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  font-family: Poppins;
   width: 100%; }
   .special-wrapper .current-special {
     width: 30%; }
+    .special-wrapper .current-special .special-content .special-date {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column; }
+    .special-wrapper .current-special .special-content .spacial-day-month span {
+      font-size: 16px;
+      line-height: 2.3rem; }
   .special-wrapper .upcoming-specials {
     display: flex;
     flex-direction: row;

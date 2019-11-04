@@ -1,12 +1,40 @@
+body {
+  font-family: Poppins;
+}
+.frame-container {
+  padding-top: 100px;
+}
+
 .special-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  font-family: Poppins;
   width: 100%;
 
   .current-special {
     width: 30%;
+
+    .special-content {
+
+      .special-date {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+      }
+
+      .spacial-day-month {
+
+        span {
+          font-size: 16px;
+          line-height: 2.3rem;
+
+        }
+
+      }
+
+    }
+
   }
 
 
