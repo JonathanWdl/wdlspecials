@@ -41,6 +41,13 @@ class WdlSpecials extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $image = null;
 
     /**
+     * specialDate
+     *
+     * @var int
+     */
+    protected $specialDate = 0;
+
+    /**
      * specialStart
      * 
      * @var int
@@ -129,6 +136,25 @@ class WdlSpecials extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image)
     {
         $this->image = $image;
+    }
+
+    /**
+     * Return the specialDate
+     *
+     * @return int $specialDate
+     */
+    public function getSpecialDate() {
+            return $this->specialDate;
+    }
+
+    /**
+     * Sets the specialDate
+     *
+     * @param int $specialDate
+     * @return void
+     */
+    public function setSpecialDate ( $specialDate ) {
+        $this->specialDate = $specialDate;
     }
 
     /**

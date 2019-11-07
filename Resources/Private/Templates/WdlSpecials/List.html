@@ -13,34 +13,19 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-			<f:for each="{wdlSpecials}" as="wdlSpecials">
-				<div class="special-wrapper">
-					{f:render(partial: 'Special', arguments:{
-						special: wdlSpecials
-					})}
-					<div class="pagination-prev"></div>
-					<div class="pagination-next"></div>
-				</div>
-
-				<!-- ############################################################################################### -->
-
-				<f:comment>
-				<tr>
-					<td><f:link.action action="show" arguments="{wdlSpecials : wdlSpecials}"> {wdlSpecials.name}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{wdlSpecials : wdlSpecials}"> {wdlSpecials.description}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{wdlSpecials : wdlSpecials}"> {wdlSpecials.image.originalResource.name}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{wdlSpecials : wdlSpecials}"> {wdlSpecials.specialStart}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{wdlSpecials : wdlSpecials}"> {wdlSpecials.specialStop}</f:link.action></td>
-
-					<td><f:link.action action="edit" arguments="{wdlSpecials : wdlSpecials}">Edit</f:link.action></td>
-					<td><f:link.action action="delete" arguments="{wdlSpecials : wdlSpecials}">Delete</f:link.action></td>
-				</tr>
-				{wdlSpecials.category.category}
-				{wdlSpecials.intervals.intervals}
-				</f:comment>
-
-				<!-- ############################################################################################### -->
-
-			</f:for>
+		<div class="special-wrapper">
+			<div class="current-special">
+				<f:for each="{activeSpecials}" as="activeSpecial" >
+					<f:render partial="Active" arguments="{activeSpecial: activeSpecial}" />
+				</f:for>
+			</div>
+			<div class="upcoming-specials">
+				<ul>
+					<f:for each="{notActiveSpecials}" as="notActiveSpecial">
+						<li><f:render partial="Special" arguments="{notActiveSpecial: notActiveSpecial}" /></li>
+					</f:for>
+				</ul>
+			</div>
+		</div>
 	</f:section>
 </html>

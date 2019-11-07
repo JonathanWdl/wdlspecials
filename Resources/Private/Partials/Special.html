@@ -1,21 +1,29 @@
-<!-- Special -->
-<div class="special">
-    <div class="special-header">
-        <div class="special-title">
-            <strong>{special.name}</strong>
-        </div>
-        <div class="special-time">
-            <f:if condition="{special.specialStart} == {special.specialStop}">
+<!-- PARTIAL NOT ACTIVE SPECIAL -->
+
+<div class="special-time">
+    <div class="special-date">
+        <p><f:format.date format="j.">{notActiveSpecial.specialDate}</f:format.date>
+        <span><f:format.date format="F">{notActiveSpecial.specialDate}</f:format.date></span></p>
+    </div>
+    <div class="special-day">
+        <p><f:format.date format="l">{notActiveSpecial.specialDate}</f:format.date></p>
+    </div>
+</div>
+<div class="special-name">
+    <div class="special-flex-column">
+        <span><f:format.raw>{notActiveSpecial.name}</f:format.raw></span>
+        <span>
+            <f:if condition="{notActiveSpecial.specialStart} == {notActiveSpecial.specialStop}">
                 <f:then>
-                    <span>ab: {special.specialStart}</span>
+                    ab: <f:format.date format="H:i">{notActiveSpecial.specialStart}</f:format.date> Uhr
                 </f:then>
                 <f:else>
-                    <span>{special.specialStart} - {special.specialStop}</span>
+                    <f:format.date format="H:i">{notActiveSpecial.specialStart}</f:format.date> - <f:format.date format="H:i">{notActiveSpecial.specialStop}</f:format.date> Uhr
                 </f:else>
             </f:if>
-        </div>
+        </span>
     </div>
-    <div class="special-content">
-        <p>{special.description}</p>
-    </div>
+</div>
+<div class="special-description">
+    <f:format.html>{notActiveSpecial.description}</f:format.html>
 </div>
