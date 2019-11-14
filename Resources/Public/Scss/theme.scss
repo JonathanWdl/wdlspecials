@@ -1,33 +1,36 @@
-body {
-  font-family: Poppins;
-}
-.frame-container {
-  padding-top: 100px;
-}
+@media only screen and (min-width: 992px) {
+  body {
+    font-family: Poppins;
+  }
+  .frame-container {
+    padding-top: 100px;
+  }
 
-.special-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
+  .special-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
 
-  .current-special {
-    width: 30%;
+    .current-special {
+      width: 30%;
 
-    .special-content {
+      .special-content {
 
-      .special-date {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+        .special-date {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
 
-      }
+        }
 
-      .spacial-day-month {
+        .spacial-day-month {
 
-        span {
-          font-size: 16px;
-          line-height: 2.3rem;
+          span {
+            font-size: 16px;
+            line-height: 2.3rem;
+
+          }
 
         }
 
@@ -35,76 +38,141 @@ body {
 
     }
 
+
+    .upcoming-specials {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 60%;
+
+      ul {
+        padding: 0;
+
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          border-bottom: 1px #aaa solid;
+          padding: 20px;
+          position: relative;
+
+
+          .special-time, .special-name, .special-description {
+            display: inline-block;
+            width: 30%;
+          }
+
+          .special-name .special-flex-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+
+            p {
+              margin: 0;
+              line-height: 1rem;
+            }
+          }
+          .special-description {
+            p {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
   }
 
+  .special-time {
+
+
+    .special-date {
+      font-size: 32px;
+      font-weight: 700;
+
+
+      p {
+        margin: 0;
+        position: relative;
+        display: flex;
+        line-height: 1.8rem;
+        align-items: flex-start;
+        color: #021541;
+
+        span {
+          font-size: 16px;
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+
+  .special-day {
+
+    align-self: flex-start;
+
+    p {
+      font-size: 2vw;
+      margin: 0;
+      line-height: 2vw;
+      color: #021541;
+    }
+  }
+}
+body {
+  font-size: 16px;
+}
+
+.frame-container {
+  width: 100%;
+  padding: 100px 0 0 0;
 
   .upcoming-specials {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 60%;
+    padding: 0 20px 0 20px;
 
     ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       padding: 0;
 
       li {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        border-bottom: 1px #aaa solid;
-        padding: 20px;
-        position: relative;
 
 
         .special-time, .special-name, .special-description {
           display: inline-block;
           width: 30%;
         }
+      }
+    }
+  }
+  .special-time {
 
-        .special-name .special-flex-column {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          height: 100%;
+    .special-date {
 
-          span {
-            line-height: 1rem;
-          }
+      p{
+        font-size: 32px;
+        color: #021541;
+        font-weight: 700;
+        margin: 0;
+        position: relative;
+        display: flex;
+        line-height: 1.8rem;
+        align-items: flex-start;
+
+        span {
+          font-size: 16px;
+          color: #333;
+          line-height: 1.2rem;
         }
       }
     }
+
+    .special-day {
+      font-size: 5vw;
+    }
   }
 }
-
-.special-time {
-
-
-  .special-date {
-    font-size: 32px;
-    font-weight: 700;
-
-
-    p {
-      margin: 0;
-      position: relative;
-      display: flex;
-      line-height: 1.8rem;
-      align-items: flex-start;
-
-      span {
-        font-size: 16px;
-        line-height: 1rem;
-      }
-    }
-  }
-  }
-
-  .special-day {
-    font-size: 2vw;
-    align-self: flex-start;
-
-    p {
-      margin: 0;
-      line-height: 1rem;
-    }
-  }
