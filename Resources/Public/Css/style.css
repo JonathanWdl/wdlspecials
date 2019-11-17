@@ -137,8 +137,14 @@ body {
 .upcoming-specials .special-time .special-day {
   font-size: 4vw;
   color: #021541;
+  line-height: 1rem;
 }
-.upcoming-specials .special-name p {
+.upcoming-specials .special-name .special-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.upcoming-specials .special-name .special-flex-column p {
   font-size: 3vw;
 }
 .upcoming-specials .special-description p {
