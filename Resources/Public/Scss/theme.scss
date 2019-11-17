@@ -119,6 +119,7 @@
     }
   }
 }
+
 body {
   font-size: 16px;
 }
@@ -140,6 +141,8 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        padding: 10px 0 10px 0;
+        border-bottom: 1px #aaa solid;
 
 
         .special-time, .special-name, .special-description {
@@ -149,12 +152,20 @@ body {
       }
     }
   }
+}
+
+.upcoming-specials {
+
+  p {
+    margin: 0;
+  }
+
   .special-time {
 
     .special-date {
 
       p{
-        font-size: 32px;
+        font-size: 6vw;
         color: #021541;
         font-weight: 700;
         margin: 0;
@@ -164,7 +175,7 @@ body {
         align-items: flex-start;
 
         span {
-          font-size: 16px;
+          font-size: 3vw;
           color: #333;
           line-height: 1.2rem;
         }
@@ -172,7 +183,28 @@ body {
     }
 
     .special-day {
-      font-size: 5vw;
+      font-size: 4vw;
+      color: #021541;
+    }
+  }
+
+  .special-name {
+
+    .special-flex-column {
+
+      display: flex;
+      
+
+      p {
+        font-size: 3vw;
+      }
+    }
+  }
+
+  .special-description {
+
+    p {
+      font-size: 3vw;
     }
   }
 }

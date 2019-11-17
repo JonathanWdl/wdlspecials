@@ -1,17 +1,148 @@
-/* Error: expected "}".
- *     ,
- * 178 | }
- *     |  ^
- *     '
- *   Scss/theme.scss 178:2  root stylesheet */
+@media only screen and (min-width: 992px) {
+  body {
+    font-family: Poppins;
+  }
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "}".\a     \2577 \a 178 \2502  }\a     \2502   ^\a     \2575 \a   Scss/theme.scss 178:2  root stylesheet';
+  .frame-container {
+    padding-top: 100px;
+  }
+
+  .special-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .special-wrapper .current-special {
+    width: 30%;
+  }
+  .special-wrapper .current-special .special-content .special-date {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .special-wrapper .current-special .special-content .spacial-day-month span {
+    font-size: 16px;
+    line-height: 2.3rem;
+  }
+  .special-wrapper .upcoming-specials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+  }
+  .special-wrapper .upcoming-specials ul {
+    padding: 0;
+  }
+  .special-wrapper .upcoming-specials ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px #aaa solid;
+    padding: 20px;
+    position: relative;
+  }
+  .special-wrapper .upcoming-specials ul li .special-time, .special-wrapper .upcoming-specials ul li .special-name, .special-wrapper .upcoming-specials ul li .special-description {
+    display: inline-block;
+    width: 30%;
+  }
+  .special-wrapper .upcoming-specials ul li .special-name .special-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .special-wrapper .upcoming-specials ul li .special-name .special-flex-column p {
+    margin: 0;
+    line-height: 1rem;
+  }
+  .special-wrapper .upcoming-specials ul li .special-description p {
+    margin: 0;
+  }
+
+  .special-time .special-date {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .special-time .special-date p {
+    margin: 0;
+    position: relative;
+    display: flex;
+    line-height: 1.8rem;
+    align-items: flex-start;
+    color: #021541;
+  }
+  .special-time .special-date p span {
+    font-size: 16px;
+    line-height: 1rem;
+  }
+
+  .special-day {
+    align-self: flex-start;
+  }
+  .special-day p {
+    font-size: 2vw;
+    margin: 0;
+    line-height: 2vw;
+    color: #021541;
+  }
 }
+body {
+  font-size: 16px;
+}
+
+.frame-container {
+  width: 100%;
+  padding: 100px 0 0 0;
+}
+.frame-container .upcoming-specials {
+  padding: 0 20px 0 20px;
+}
+.frame-container .upcoming-specials ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+.frame-container .upcoming-specials ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 0 10px 0;
+  border-bottom: 1px #aaa solid;
+}
+.frame-container .upcoming-specials ul li .special-time, .frame-container .upcoming-specials ul li .special-name, .frame-container .upcoming-specials ul li .special-description {
+  display: inline-block;
+  width: 30%;
+}
+
+.upcoming-specials p {
+  margin: 0;
+}
+.upcoming-specials .special-time .special-date p {
+  font-size: 6vw;
+  color: #021541;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  display: flex;
+  line-height: 1.8rem;
+  align-items: flex-start;
+}
+.upcoming-specials .special-time .special-date p span {
+  font-size: 3vw;
+  color: #333;
+  line-height: 1.2rem;
+}
+.upcoming-specials .special-time .special-day {
+  font-size: 4vw;
+  color: #021541;
+}
+.upcoming-specials .special-name p {
+  font-size: 3vw;
+}
+.upcoming-specials .special-description p {
+  font-size: 3vw;
+}
+
+/*# sourceMappingURL=style.css.map */
