@@ -133,7 +133,7 @@
       } //.special-day-month
     } //.current-special
     .upcoming-specials {
-      width: 50%;
+      width: 60%;
       ul {
         li {
           .special-time {
@@ -174,4 +174,51 @@
 
 
 
+} //media-query: 768
+@media only screen and (min-width: 992px) {
+  .special-wrapper {
+
+    .current-special {
+      width: 40%;
+    } //.current-special
+    .upcoming-specials {
+      width: 60%;
+      ul {
+        li {
+          padding: 20px 0;
+          .special-time {
+            .special-date {
+              p {
+                font-size: 2rem;
+                line-height: 2.1rem;
+
+                span {
+                  font-size: 1.2rem;
+                  line-height: 1.2rem;
+                }
+              }
+            } //.special-date
+            .special-day {
+              font-size: 1.7rem;
+              line-height: 1.7rem;
+            } //.special-day
+          } //.special-time
+          .special-name {
+            .special-flex-column {
+              p {
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+              }
+            } //.special-flex-column
+          } //.special-name
+          .special-description {
+            p {
+              font-size: 1.2rem;
+              line-height: 1.4rem;
+            }
+          } //.special-description
+        } // li
+      } // ul
+    } //.upcoming-specials
+  } //.special-wrapper
 } //media-query: 992
