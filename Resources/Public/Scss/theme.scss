@@ -1,6 +1,70 @@
+///////////////////
 // Current Specials
+///////////////////
+.current-special {
+  width: 100%;
+  padding: 0;
 
+  .special-active {
+    .special-content {
+      .special-time {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        .special-date,
+        .special-name {
+          width: 50%;
+        } //.special-date, .special-name
+
+        .special-date {
+          span.special-day-month {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #021541;
+            position: relative;
+            display: flex;
+            line-height: 1.8rem;
+            align-items: flex-start;
+
+            span {
+              font-size: 1rem;
+              color: #333333;
+              line-height: 1rem;
+            }
+          } //span.special-day-month
+          span.special-day {
+            font-size: 1.7rem;
+            color: #021541;
+            line-height: 1.7rem;
+          } //span.special-day
+        } //.special-date
+        .special-name {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          text-align: right;
+
+          span {
+            font-size: 1rem;
+            line-height: 1rem;
+          }
+        } //.special-name
+      } //.special-time
+      .special-description {
+        p {
+          font-size: .7rem;
+          font-weight: 300;
+        }
+      } //.special-description
+    } //.special-content
+  } //.special-active
+} //.current-special
+
+////////////////////
 // UPCOMING SPECIALS
+////////////////////
 .upcoming-specials {
   width: 100%;
   padding: 0;
