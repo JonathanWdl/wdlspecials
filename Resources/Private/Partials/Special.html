@@ -2,7 +2,7 @@
 
 <div class="special-time">
     <div class="special-date">
-        <p><f:format.date format="j.">{notActiveSpecial.specialDate}</f:format.date>
+        <p><f:format.date format="j">{notActiveSpecial.specialDate}</f:format.date>
         <span><f:format.date format="F">{notActiveSpecial.specialDate}</f:format.date></span></p>
     </div>
     <div class="special-day">
@@ -11,8 +11,8 @@
 </div>
 <div class="special-name">
     <div class="special-flex-column">
-        <span><f:format.raw>{notActiveSpecial.name}</f:format.raw></span>
-        <span>
+        <p><f:format.raw>{notActiveSpecial.name}</f:format.raw></p>
+        <p>
             <f:if condition="{notActiveSpecial.specialStart} == {notActiveSpecial.specialStop}">
                 <f:then>
                     ab: <f:format.date format="H:i">{notActiveSpecial.specialStart}</f:format.date> Uhr
@@ -21,7 +21,7 @@
                     <f:format.date format="H:i">{notActiveSpecial.specialStart}</f:format.date> - <f:format.date format="H:i">{notActiveSpecial.specialStop}</f:format.date> Uhr
                 </f:else>
             </f:if>
-        </span>
+        </p>
     </div>
 </div>
 <div class="special-description">

@@ -1,22 +1,25 @@
 <!-- PARTIAL ACTIVE SPECIAL -->
 <div class="special-active">
-    <div class="special-image">
-        <f:if condition="{activeSpecial.image}">
-            <!-- RENDER IMAGE -->
-        </f:if>
-    </div>
+    <f:if condition="{activeSpecial.image}">
+        <div class="special-image">
+            <f:image image="{activeSpecial.image}" />
+        </div>
+    </f:if>
     <div class="special-content">
+        <div class="special-description">
+            <f:format.html>{activeSpecial.description}</f:format.html>
+        </div>
         <div class="special-time">
             <div class="special-date">
-                <span class="spacial-day-month">
-                    <f:format.date format="j.">{activeSpecial.specialDate}</f:format.date>
+                <p>
+                    <f:format.date format="j">{activeSpecial.specialDate}</f:format.date>
                     <span><f:format.date format="F">{activeSpecial.specialDate}</f:format.date></span>
-                </span>
-                <span class="special-day">Heute</span>
+                </p>
+                <p class="special-day">Heute</p>
             </div>
             <div class="special-name">
-                <span><f:format.raw>{activeSpecial.name}</f:format.raw></span>
-                <span>
+                <p><f:format.raw>{activeSpecial.name}</f:format.raw></p>
+                <p>
                     <f:if condition="{activeSpecial.specialStart} == {activeSpecial.specialStop}">
                         <f:then>
                             ab: <f:format.date format="H:i">{activeSpecial.specialStart}</f:format.date> Uhr
@@ -25,11 +28,9 @@
                             <f:format.date format="H:i">{activeSpecial.specialStart}</f:format.date> - <f:format.date format="H:i">{activeSpecial.specialStop}</f:format.date> Uhr
                         </f:else>
                     </f:if>
-                </span>
+                </p>
             </div>
         </div>
-        <div class="special-description">
-            <f:format.html>{activeSpecial.description}</f:format.html>
-        </div>
+
     </div>
 </div>
