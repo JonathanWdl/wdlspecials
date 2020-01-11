@@ -55,6 +55,8 @@ class WdlSpecialsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
                 return $a->getSpecialDate() < $b->getSpecialDate() ? -1 : 1; //ascending
             }
         });
+        // Slice array to display only the 4 next specials
+        $notActiveSpecials = array_slice( $notActiveSpecials, 0, 4 );
         // Assign all specials to view
         $this->view->assign( 'activeSpecials', $activeSpecials );
         $this->view->assign( 'notActiveSpecials', $notActiveSpecials);
