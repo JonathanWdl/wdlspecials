@@ -3,7 +3,7 @@
 ///////////////////
 .current-special {
   width: 100%;
-  padding: 15px 0;
+  padding: 0 0 15px 0;
 
   p {
     margin: 0;
@@ -11,13 +11,13 @@
 
   .special-active {
     .special-image {
+
       img {
         width: 100%;
         height: auto;
       }
     } //.special-image
     .special-content {
-      padding: 20px 0;
       .special-time {
         display: flex;
         flex-direction: row;
@@ -43,6 +43,8 @@
               font-size: 1rem;
               color: #333333;
               line-height: 1rem;
+              padding-left: 7px;
+              font-weight: 400;
             }
           } //p
           p.special-day {
@@ -64,9 +66,10 @@
         } //.special-name
       } //.special-time
       .special-description {
+        margin: 5px 0 10px 0;
         p {
-          font-size: .7rem;
-          font-weight: 300;
+          font-size: 1rem;
+          font-weight: 600;
         }
       } //.special-description
     } //.special-content
@@ -81,7 +84,7 @@
           .special-date {
             p {
               font-size: 2rem;
-              line-height: 2.1rem;
+              line-height: 1.8rem;
 
               span {
                 font-size: 1.2rem;
@@ -131,8 +134,6 @@
             p {
               font-size: .9rem;
               line-height: 1rem;
-              margin: 0;
-              padding: 0;
             }
           } //.special-name
         } //.special-time
@@ -141,12 +142,47 @@
   } //.current-special
 } //media-query: 768
 
+@media only screen and (min-width: 992px) {
+  .current-special {
+    width: 35%;
+
+    .special-active {
+      .special-content {
+        .special-time {
+          .special-date {
+            p {
+              font-size: 2rem;
+              line-height: 1.8rem;
+
+              span {
+                font-size: 1.2rem;
+                line-height: 1.2rem;
+              }
+            } //p
+            p.special-day {
+              font-size: 1.7rem;
+              line-height: 1.7rem;
+            } //p.special-day
+          } //.special-date
+          .special-name {
+            p {
+              font-size: 1.2rem;
+              line-height: 1.4rem;
+            }
+          } //.special-name
+        } //.special-time
+      } //.special-content
+    } //.special-active
+  } //.current-special
+} //media-query: 992
+
 ////////////////////
 // UPCOMING SPECIALS
 ////////////////////
 .upcoming-specials {
   width: 100%;
   padding: 0;
+  margin-top: 30px;
 
   ul {
     display: flex;
@@ -161,6 +197,9 @@
       padding: 15px 0;
       border-bottom: 1px #aaa solid;
 
+      &:last-child {
+        border-bottom: none;
+      } //li:last-child
       .special-time,
       .special-name,
       .special-description {
@@ -183,6 +222,8 @@
               font-size: .7rem;
               color: #333333;
               line-height: 1rem;
+              padding-left: 7px;
+              font-weight: 400;
             }
           }
         } //.special-date
@@ -226,7 +267,7 @@
         .special-date {
           p {
             font-size: 2rem;
-            line-height: 2rem;
+            line-height: 1.8rem;
 
             span {
               font-size: 1rem;
@@ -267,8 +308,16 @@
 
     .upcoming-specials {
       width: 60%;
+      margin-top: 0;
+
+      h3 {
+        display: none;
+      }
       ul {
         li {
+          &:first-child {
+            padding-top: 0;
+          } //li:first-child
           .special-time {
             .special-date {
               p {
@@ -320,7 +369,7 @@
             .special-date {
               p {
                 font-size: 2rem;
-                line-height: 2.1rem;
+                line-height: 1.8rem;
 
                 span {
                   font-size: 1.2rem;
