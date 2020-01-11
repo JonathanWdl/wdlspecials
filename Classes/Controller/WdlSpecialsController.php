@@ -37,7 +37,6 @@ class WdlSpecialsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
         // Arrays to store specials in
         $activeSpecials = array();
         $notActiveSpecials = array();
-
         // Check if specials are today or not
         foreach ($wdlSpecials as $key => $special) {
             $specialDate = date('d.m.Y', $special->getSpecialDate());
@@ -48,6 +47,14 @@ class WdlSpecialsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
                 $notActiveSpecials[$key] = $special;
             }
         }
+        // Sort array ascending by specialDate
+        usort( $notActiveSpecials, function( $a, $b ) {
+            if ( $a->getSpecialDate() == $b->getSpecialDate()) {
+                return 0;
+            } else {
+                return $a->getSpecialDate() < $b->getSpecialDate() ? -1 : 1; //ascending
+            }
+        });
         // Assign all specials to view
         $this->view->assign( 'activeSpecials', $activeSpecials );
         $this->view->assign( 'notActiveSpecials', $notActiveSpecials);
