@@ -43,10 +43,10 @@ class WdlSpecialsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
             $currentDate = date('d.m.Y');
             if ( $specialDate == $currentDate) {
                 $activeSpecials[$key] = $special;
-            } else {
+            } elseif ( $specialDate > $currentDate ) {
                 $notActiveSpecials[$key] = $special;
             }
-        }
+        } //end foreach
         // Sort array ascending by specialDate
         usort( $notActiveSpecials, function( $a, $b ) {
             if ( $a->getSpecialDate() == $b->getSpecialDate()) {
