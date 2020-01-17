@@ -1,29 +1,35 @@
 <!-- PARTIAL NOT ACTIVE SPECIAL -->
-
-<div class="special-time">
-    <div class="special-date">
-        <p><f:format.date format="j">{notActiveSpecial.specialDate}</f:format.date>
-        <span><f:format.date format="F">{notActiveSpecial.specialDate}</f:format.date></span></p>
-    </div>
-    <div class="special-day">
-        <p><f:format.date format="l">{notActiveSpecial.specialDate}</f:format.date></p>
-    </div>
-</div>
-<div class="special-name">
-    <div class="special-flex-column">
-        <p><f:format.raw>{notActiveSpecial.name}</f:format.raw></p>
-        <p>
-            <f:if condition="{notActiveSpecial.specialStart} == {notActiveSpecial.specialStop}">
-                <f:then>
-                    ab: <f:format.date format="H:i">{notActiveSpecial.specialStart}</f:format.date> Uhr
-                </f:then>
-                <f:else>
-                    <f:format.date format="H:i">{notActiveSpecial.specialStart}</f:format.date> - <f:format.date format="H:i">{notActiveSpecial.specialStop}</f:format.date> Uhr
-                </f:else>
-            </f:if>
-        </p>
-    </div>
-</div>
-<div class="special-description">
-    <f:format.html>{notActiveSpecial.description}</f:format.html>
-</div>
+<f:if condition="! {notActiveSpecial.noSpecials}">
+    <f:then>
+        <div class="special-time">
+            <div class="special-date">
+                <p><f:format.date format="j">{notActiveSpecial.specialDate}</f:format.date>
+                <span><f:format.date format="F">{notActiveSpecial.specialDate}</f:format.date></span></p>
+            </div>
+            <div class="special-day">
+                <p><f:format.date format="l">{notActiveSpecial.specialDate}</f:format.date></p>
+            </div>
+        </div>
+        <div class="special-name">
+            <div class="special-flex-column">
+                <p><f:format.raw>{notActiveSpecial.name}</f:format.raw></p>
+                <p>
+                    <f:if condition="{notActiveSpecial.specialStart} == {notActiveSpecial.specialStop}">
+                        <f:then>
+                            ab: <f:format.date format="H:i">{notActiveSpecial.specialStart}</f:format.date> Uhr
+                        </f:then>
+                        <f:else>
+                            <f:format.date format="H:i">{notActiveSpecial.specialStart}</f:format.date> - <f:format.date format="H:i">{notActiveSpecial.specialStop}</f:format.date> Uhr
+                        </f:else>
+                    </f:if>
+                </p>
+            </div>
+        </div>
+        <div class="special-description">
+            <f:format.html>{notActiveSpecial.description}</f:format.html>
+        </div>
+    </f:then>
+    <f:else>
+        <span><f:format.html>{notActiveSpecial.noSpecials}</f:format.html></span>
+    </f:else>
+</f:if>
