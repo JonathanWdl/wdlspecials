@@ -1,14 +1,20 @@
 <!-- PARTIAL ACTIVE SPECIAL -->
-<div class="special-active">
-    <f:if condition="{activeSpecial.image}">
+<div class="special-active" xmlns:f="http://www.w3.org/1999/html">
+    <f:if condition="{activeSpecial.image} || {activeSpecial.isEmpty}">
         <div class="special-image">
-            <f:image image="{activeSpecial.image}" />
+            <f:if condition="{activeSpecial.image}">
+                <f:image image="{activeSpecial.image}" />
+            </f:if>
+            <f:if condition="{activeSpecial.isEmpty}">
+                <f:image src="{activeSpecial.imageSrc}"/>
+            </f:if>
         </div>
     </f:if>
     <div class="special-content">
         <div class="special-description">
             <f:format.html>{activeSpecial.description}</f:format.html>
         </div>
+        <f:if condition="! {activeSpecial.isEmpty}">
         <div class="special-time">
             <div class="special-date">
                 <p>
@@ -31,6 +37,6 @@
                 </p>
             </div>
         </div>
-
+        </f:if>
     </div>
 </div>

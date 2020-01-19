@@ -2,6 +2,8 @@
 namespace JonathanWdl\Wdlspecials\Controller;
 
 
+use JonathanWdl\Wdlspecials\Domain\Model\WdlSpecials;
+
 /***
  *
  * This file is part of the "Wdl_Special" Extension for TYPO3 CMS.
@@ -20,7 +22,7 @@ class WdlSpecialsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 
     /**
      * wdlSpecialsRepository
-     * 
+     *
      * @var \JonathanWdl\Wdlspecials\Domain\Repository\WdlSpecialsRepository
      * @inject
      */
@@ -28,7 +30,7 @@ class WdlSpecialsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 
     /**
      * action list
-     * 
+     *
      * @return void
      */
     public function listAction()
@@ -43,10 +45,25 @@ class WdlSpecialsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
             $currentDate = date('d.m.Y');
             if ( $specialDate == $currentDate) {
                 $activeSpecials[$key] = $special;
-            } else {
+            } elseif ( $specialDate > $currentDate ) {
                 $notActiveSpecials[$key] = $special;
             }
+        } //end foreach
+
+
+        if ( empty( $activeSpecials )) {
+            $activeSpecials[0] = new \stdClass();
+            $activeSpecials[0]->description = "Heute findet kein Special statt.
+            Rechts in der Liste sehen Sie die kommenden Specials";
+            $activeSpecials[0]->isEmpty = TRUE;
+            $activeSpecials[0]->imageSrc = "EXT:wdlspecials/Resources/Public/Images/mash_no-special.jpg";
         }
+
+        if ( empty( $notActiveSpecials )) {
+            $notActiveSpecials[0] = new \stdClass();
+            $notActiveSpecials[0]->noSpecials = "Es stehen zur Zeit keine Specials an";
+        }
+
         // Sort array ascending by specialDate
         usort( $notActiveSpecials, function( $a, $b ) {
             if ( $a->getSpecialDate() == $b->getSpecialDate()) {
