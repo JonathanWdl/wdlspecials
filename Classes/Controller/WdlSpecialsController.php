@@ -36,6 +36,9 @@ class WdlSpecialsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
     public function listAction()
     {
         $wdlSpecials = $this->wdlSpecialsRepository->findAll();
+
+        date_default_timezone_set('Europe/Berlin');
+        setlocale(LC_TIME, 'de_DE', 'deu_deu');
         // Arrays to store specials in
         $activeSpecials = array();
         $notActiveSpecials = array();
@@ -54,14 +57,14 @@ class WdlSpecialsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
         if ( empty( $activeSpecials )) {
             $activeSpecials[0] = new \stdClass();
             $activeSpecials[0]->description = "Heute findet kein Special statt.
-            Rechts in der Liste sehen Sie die kommenden Specials";
+            Rechts in der Liste findest du unsere kommenden Specials.";
             $activeSpecials[0]->isEmpty = TRUE;
             $activeSpecials[0]->imageSrc = "EXT:wdlspecials/Resources/Public/Images/mash_no-special.jpg";
         }
 
         if ( empty( $notActiveSpecials )) {
             $notActiveSpecials[0] = new \stdClass();
-            $notActiveSpecials[0]->noSpecials = "Es stehen zur Zeit keine Specials an";
+            $notActiveSpecials[0]->noSpecials = "Zur Zeit stehen keine Specials an.";
         }
 
         // Sort array ascending by specialDate
