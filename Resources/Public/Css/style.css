@@ -1,0 +1,156 @@
+body {
+  font-size: 16px;
+}
+
+.frame-container {
+  width: 100%;
+  padding: 100px 0 0 0;
+}
+.frame-container .upcoming-specials {
+  padding: 0 20px 0 20px;
+}
+.frame-container .upcoming-specials ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+.frame-container .upcoming-specials ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px #aaa solid;
+}
+.frame-container .upcoming-specials ul li .special-time, .frame-container .upcoming-specials ul li .special-name, .frame-container .upcoming-specials ul li .special-description {
+  display: inline-block;
+  width: 30%;
+}
+
+.upcoming-specials p {
+  margin: 0;
+}
+.upcoming-specials .special-time .special-date p {
+  font-size: 6vw;
+  color: #021541;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  display: flex;
+  line-height: 1.8rem;
+  align-items: flex-start;
+}
+.upcoming-specials .special-time .special-date p span {
+  font-size: 3vw;
+  color: #333;
+  line-height: 1.2rem;
+}
+.upcoming-specials .special-time .special-day {
+  font-size: 4vw;
+  color: #021541;
+  line-height: 1rem;
+}
+.upcoming-specials .special-name .special-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.upcoming-specials .special-name .special-flex-column p {
+  font-size: 3vw;
+  line-height: 1rem;
+}
+.upcoming-specials .special-description p {
+  font-size: 3vw;
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    font-family: Poppins;
+  }
+
+  .frame-container {
+    padding-top: 100px;
+  }
+
+  .special-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .special-wrapper .current-special {
+    width: 30%;
+  }
+  .special-wrapper .current-special .spacial-day-month span {
+    font-size: 16px;
+    line-height: 2.3rem;
+  }
+
+  .upcoming-specials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .upcoming-specials ul {
+    padding: 0;
+  }
+  .upcoming-specials ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px #aaa solid;
+    padding: 20px;
+    position: relative;
+  }
+  .upcoming-specials ul li .special-time, .upcoming-specials ul li .special-name, .upcoming-specials ul li .special-description {
+    display: inline-block;
+    width: 30%;
+  }
+  .upcoming-specials ul li .special-name .special-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .upcoming-specials ul li .special-name .special-flex-column p {
+    margin: 0;
+    line-height: 1rem;
+    font-size: 16px;
+  }
+  .upcoming-specials ul li .special-description p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .special-time .special-date {
+    font-weight: 700;
+  }
+  .special-time .special-date p {
+    margin: 0;
+    position: relative;
+    display: flex;
+    line-height: 1.8rem;
+    align-items: flex-start;
+    font-size: 32px !important;
+    color: #021541;
+  }
+  .special-time .special-date p span {
+    font-size: 16px !important;
+    line-height: 1rem;
+    color: #021541 !important;
+  }
+
+  .special-day {
+    align-self: flex-start;
+  }
+  .special-day p {
+    font-size: 1.5vw !important;
+    margin: 0;
+    line-height: 2vw;
+    color: #021541;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

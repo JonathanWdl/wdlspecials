@@ -1,0 +1,32 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+		<div class="special-wrapper">
+			<div class="current-special">
+				<f:for each="{activeSpecials}" as="activeSpecial" >
+					<f:render partial="Active" arguments="{activeSpecial: activeSpecial}" />
+				</f:for>
+			</div>
+			<div class="upcoming-specials">
+				<h3>Weitere Specials</h3>
+				<ul>
+					<f:for each="{notActiveSpecials}" as="notActiveSpecial">
+						<li><f:render partial="Special" arguments="{notActiveSpecial: notActiveSpecial}" /></li>
+					</f:for>
+				</ul>
+			</div>
+		</div>
+	</f:section>
+</html>

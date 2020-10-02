@@ -1,0 +1,42 @@
+<!-- PARTIAL ACTIVE SPECIAL -->
+<div class="special-active" xmlns:f="http://www.w3.org/1999/html">
+    <f:if condition="{activeSpecial.image} || {activeSpecial.isEmpty}">
+        <div class="special-image">
+            <f:if condition="{activeSpecial.image}">
+                <f:image image="{activeSpecial.image}" />
+            </f:if>
+            <f:if condition="{activeSpecial.isEmpty}">
+                <f:image src="{activeSpecial.imageSrc}"/>
+            </f:if>
+        </div>
+    </f:if>
+    <div class="special-content">
+        <div class="special-description">
+            <f:format.html>{activeSpecial.description}</f:format.html>
+        </div>
+        <f:if condition="! {activeSpecial.isEmpty}">
+        <div class="special-time">
+            <div class="special-date">
+                <p>
+                    <f:format.date format="%e">{activeSpecial.specialDate}</f:format.date>
+                    <span><f:format.date format="%B">{activeSpecial.specialDate}</f:format.date></span>
+                </p>
+                <p class="special-day">Heute</p>
+            </div>
+            <div class="special-name">
+                <p><f:format.raw>{activeSpecial.name}</f:format.raw></p>
+                <p>
+                    <f:if condition="{activeSpecial.specialStart} == {activeSpecial.specialStop}">
+                        <f:then>
+                            ab: <f:format.date format="H:i">{activeSpecial.specialStart}</f:format.date> Uhr
+                        </f:then>
+                        <f:else>
+                            <f:format.date format="H:i">{activeSpecial.specialStart}</f:format.date> - <f:format.date format="H:i">{activeSpecial.specialStop}</f:format.date> Uhr
+                        </f:else>
+                    </f:if>
+                </p>
+            </div>
+        </div>
+        </f:if>
+    </div>
+</div>

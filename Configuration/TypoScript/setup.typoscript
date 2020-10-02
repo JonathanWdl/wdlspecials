@@ -1,0 +1,37 @@
+
+plugin.tx_wdlspecials_wdlspecials {
+    view {
+        templateRootPaths.0 = EXT:{extension.extensionKey}/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_wdlspecials_wdlspecials.view.templateRootPath}
+        partialRootPaths.0 = EXT:wdlspecials/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_wdlspecials_wdlspecials.view.partialRootPath}
+        layoutRootPaths.0 = EXT:wdlspecials/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_wdlspecials_wdlspecials.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_wdlspecials_wdlspecials.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+        # Should be on by default, but can be disabled if all action in the plugin are uncached
+        requireCHashArgumentForActionArguments = 1
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+#########
+## CSS
+#########
+page.includeCSS.style = EXT:wdlspecials/Resources/Public/Scss/theme.scss
+poppins = EXT:mash_sitepackage/Resources/Public/Fonts/poppins.css
+
+
+#########
+## JS
+#########
+# page.includeJSFooter.wdlspecials = EXT:wdlspecials/Resources/Public/JavaScript/special.js
